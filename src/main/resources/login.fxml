@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="1000.0" xmlns="http://javafx.com/javafx/21.0.6" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.pharmacy.LoginController">
+
+    <children>
+        <VBox alignment="TOP_CENTER"
+              prefHeight="600.0" prefWidth="300.0"
+              style="-fx-background-color: #279242;"
+              AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+
+            <padding>
+                <Insets top="60.0" left="32.0" right="32.0" bottom="32.0" />
+            </padding>
+
+            <children>
+                <!-- Pharmacy Icon -->
+                <ImageView fitHeight="180.0" fitWidth="150.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@pharmacy_logo.png" />
+                    </image>
+                </ImageView>
+
+                <!-- System Title -->
+                <Label maxWidth="273.0" prefHeight="67.0" prefWidth="235.0"
+                       text="Pharmacy Management System"
+                       textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+
+
+        <!-- Right Panel - Login Form -->
+        <VBox alignment="CENTER" layoutX="300.0" prefHeight="600.0" prefWidth="700.0" spacing="16.0"
+              style="-fx-background-color: #F5F5F5;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+            <children>
+                <!-- Small Pharmacy Icon -->
+                <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@pharmacy_logo.png" />
+                    </image>
+                </ImageView>
+
+                <!-- Welcome Text -->
+                <Label text="Welcome, Pharmacist!" textFill="#424242">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="16.0" />
+                    </VBox.margin>
+                </Label>
+
+                <!-- Username Field -->
+                <TextField fx:id="usernameField" maxWidth="400.0" prefHeight="56.0" promptText="Users"
+                           style="-fx-background-color: #E0E0E0;
+                            -fx-background-radius: 4; -fx-prompt-text-fill: #9E9E9E;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <padding>
+                        <Insets left="16.0" right="16.0" />
+                    </padding>
+                </TextField>
+
+                <!-- Password Field with Toggle Button -->
+                <AnchorPane maxWidth="400.0" prefHeight="56.0">
+                    <children>
+                        <PasswordField fx:id="passwordField" layoutX="0.0" layoutY="0.0" prefHeight="56.0"
+                                       prefWidth="400.0" promptText="Password" style="
+                                       -fx-background-color: #E0E0E0; -fx-background-radius: 4; -fx-prompt-text-fill: #9E9E9E;">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <padding>
+                                <Insets left="16.0" right="50.0" />
+                            </padding>
+                        </PasswordField>
+
+                        <TextField fx:id="passwordTextField" layoutX="0.0" layoutY="0.0" prefHeight="56.0"
+                                   prefWidth="400.0" promptText="Password" style="
+                                   -fx-background-color: #E0E0E0; -fx-background-radius: 4; -fx-prompt-text-fill: #9E9E9E;" visible="false">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <padding>
+                                <Insets left="16.0" right="50.0" />
+                            </padding>
+                        </TextField>
+
+                        <Button fx:id="togglePasswordButton" layoutX="353.0" layoutY="8.0" mnemonicParsing="false"
+                                onAction="#togglePasswordVisibility" prefHeight="40.0" prefWidth="40.0"
+                                style="-fx-background-color: transparent; -fx-cursor: hand;" text="👁">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+
+                <!-- Login Button -->
+                <Button fx:id="loginButton"
+                        text="Login"
+                        onAction="#handleLogin"
+                        prefWidth="200.0"
+                        prefHeight="40.0"
+                        maxWidth="200.0"
+                        mnemonicParsing="false"
+                        textFill="WHITE"
+                        style="-fx-background-color: #279242;
+               -fx-background-radius: 6;
+               -fx-cursor: hand;">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="12.0" />
+                    </VBox.margin>
+                </Button>
+
+
+            </children>
+            <padding>
+                <Insets bottom="48.0" left="48.0" right="48.0" top="48.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
